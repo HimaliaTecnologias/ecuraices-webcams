@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Cámara - ECURAICES WEBCAMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="recursos/logpeque.png" alt="ECURAICES WEBCAMS" class="navbar-logo me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categorias.html">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="unete.html">Únete</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detalle Section -->
+    <section class="detalle-section py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <nav aria-label="breadcrumb" class="breadcrumb-container">
+                        <ol class="breadcrumb-enhanced mb-0">
+                            <li class="breadcrumb-item-enhanced">
+                                <a href="index.html">
+                                    <i class="bi bi-house-door"></i> Inicio
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item-enhanced">
+                                <a href="categorias.html">Categorías</a>
+                            </li>
+                            <li class="breadcrumb-item-enhanced">
+                                <a href="categorias.html?cat=playas">Playas</a>
+                            </li>
+                            <li class="breadcrumb-item-enhanced active" aria-current="page">Santa Elena - Playa Ballenita</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Nombre y Localización encima de la imagen -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="camara-header-top">
+                        <h1 class="camara-title-top mb-1">
+                            <span class="text-ecu">Santa Elena</span> - <span class="text-rai">Playa Ballenita</span>
+                        </h1>
+                        <div class="camara-location-top">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Santa Elena, Ecuador</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Video Player -->
+                <div class="col-lg-8 mb-4">
+                    <div class="video-container-enhanced">
+                        <div class="video-wrapper-enhanced">
+                            <div class="live-badge-large">
+                                <span class="live-dot"></span> EN VIVO
+                            </div>
+                            <!-- Stream de video en vivo -->
+                            <div class="video-placeholder-enhanced" id="videoStream">
+                                <iframe 
+                                    src="https://rtsp.me/embed/9kbKi9AG/" 
+                                    frameborder="0" 
+                                    title="RTSP Stream Player" 
+                                    allowfullscreen
+                                    class="video-iframe-enhanced"
+                                    id="videoIframe">
+                                    Iframes not supported. Broadcasting 
+                                    <a href="https://rtsp.me/" title="rtsp video streaming service">rtsp.me</a> player
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Descripción de la Cámara - Debajo de la imagen -->
+                    <div class="camara-description-card mt-4">
+                        <div class="description-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-info-circle"></i> Descripción
+                            </h5>
+                        </div>
+                        <div class="description-content">
+                            <p>Hermosa playa con vista al océano Pacífico. Disfruta de las olas, la brisa marina y los atardeceres espectaculares.</p>
+                        </div>
+                        <div class="description-details">
+                            <div class="description-detail-item">
+                                <i class="bi bi-clock"></i>
+                                <span>24/7 - Transmisión continua</span>
+                            </div>
+                            <div class="description-detail-item">
+                                <i class="bi bi-camera-video"></i>
+                                <span>HD - Alta definición</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información de la Cámara - Patrocinador primero -->
+                <div class="col-lg-4">
+
+                    <!-- Banner Publicitario del Colaborador -->
+                    <div class="sponsor-banner mb-4" id="sponsorBanner">
+                        <div class="sponsor-banner-content">
+                            <div class="sponsor-badge">
+                                <i class="bi bi-star-fill"></i> Colaborador
+                            </div>
+                            <div class="sponsor-image-wrapper">
+                                <img src="recursos/hosteria.png" alt="Hostería Mirador Farallón Dillon" class="sponsor-image">
+                            </div>
+                            <div class="sponsor-info">
+                                <h4 class="sponsor-title">Hostería Mirador Farallón Dillon</h4>
+                                <p class="sponsor-description">Disfruta de una experiencia única con vistas espectaculares al océano Pacífico. Hospedaje de calidad en Santa Elena.</p>
+                                <a href="https://www.miradorfarallondillon.com" class="btn btn-sponsor" target="_blank" rel="noopener">
+                                    <i class="bi bi-box-arrow-up-right"></i> Visitar Web
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Información del Tiempo -->
+                    <div class="weather-card-enhanced mb-4">
+                        <div class="weather-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-cloud-sun"></i> Condiciones Actuales
+                            </h5>
+                        </div>
+                        <div class="weather-info-enhanced">
+                            <div class="weather-item-enhanced">
+                                <div class="weather-icon">
+                                    <i class="bi bi-thermometer-half"></i>
+                                </div>
+                                <div class="weather-text">
+                                    <span class="weather-label">Temperatura</span>
+                                    <span class="weather-value">26°C</span>
+                                </div>
+                            </div>
+                            <div class="weather-item-enhanced">
+                                <div class="weather-icon">
+                                    <i class="bi bi-wind"></i>
+                                </div>
+                                <div class="weather-text">
+                                    <span class="weather-label">Viento</span>
+                                    <span class="weather-value">15 km/h</span>
+                                </div>
+                            </div>
+                            <div class="weather-item-enhanced">
+                                <div class="weather-icon">
+                                    <i class="bi bi-eye"></i>
+                                </div>
+                                <div class="weather-text">
+                                    <span class="weather-label">Visibilidad</span>
+                                    <span class="weather-value">Excelente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa de Ubicación -->
+                    <div class="mapa-card-enhanced mb-4">
+                        <div class="mapa-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-geo-alt-fill"></i> Ubicación
+                            </h5>
+                        </div>
+                        <div id="mapaDetalle" class="mapa-detalle-enhanced"></div>
+                    </div>
+
+                    <!-- Botón Volver -->
+                    <div class="camara-actions-enhanced">
+                        <a href="categorias.html?cat=playas" class="btn btn-back-categoria w-100">
+                            <i class="bi bi-arrow-left"></i> Volver a Categorías
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cámaras Relacionadas -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="section-header-related mb-4">
+                        <h3 class="mb-0">
+                            <span class="text-ecu">Otras</span> <span class="text-rai">Cámaras</span>
+                        </h3>
+                        <p class="text-muted mb-0">Descubre más lugares de Ecuador en tiempo real</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="related-camara-card-enhanced">
+                                <div class="related-thumbnail-enhanced">
+                                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=250&fit=crop&q=80" alt="Próxima cámara" class="related-image">
+                                    <div class="coming-soon-overlay">
+                                        <div class="coming-soon-badge-enhanced">
+                                            <i class="bi bi-clock"></i> Próximamente
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="related-info-enhanced">
+                                    <h6 class="related-title">Nueva Cámara</h6>
+                                    <p class="related-description">Muy pronto estará disponible</p>
+                                    <div class="related-category-badge">
+                                        <span class="badge badge-coming-soon">En desarrollo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="recursos/logpeque.png" alt="ECURAICES WEBCAMS" class="footer-logo mb-4">
+                    <p class="footer-text">Red de webcams de Ecuador. Descubre nuestro país en tiempo real a través de nuestra red de cámaras en vivo.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Enlaces</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="categorias.html">Categorías</a></li>
+                        <li><a href="index.html#mapa">Mapa de Cámaras</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <div class="footer-contact">
+                        <p class="footer-contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <a href="mailto:info@ecuraices.com">info@ecuraices.com</a>
+                        </p>
+                        <p class="footer-contact-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Ecuador</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center">
+                <p class="footer-copyright">&copy; 2025 ECURAICES WEBCAMS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/detalle.js"></script>
+    <script src="js/mapa-detalle.js"></script>
+</body>
+</html>
+

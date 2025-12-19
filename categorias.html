@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías - ECURAICES WEBCAMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="recursos/logpeque.png" alt="ECURAICES WEBCAMS" class="navbar-logo me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="categorias.html">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="unete.html">Únete</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="page-header py-5 mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-3 fw-bold mb-4">
+                        <span class="text-ecu">Categorías</span> <span class="text-rai">de</span> <span class="text-ces">Cámaras</span>
+                    </h1>
+                    <p class="lead text-muted mb-0">Explora nuestras webcams organizadas por categorías. Encuentra el lugar perfecto para observar Ecuador en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías Grid -->
+    <section class="categorias-grid py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Categoría Playas -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="categoria-card-enhanced" data-categoria="playas">
+                        <div class="categoria-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop&q=80" alt="Playas del Pacífico Ecuatoriano" class="categoria-image" loading="lazy">
+                            <div class="categoria-overlay categoria-overlay-playas"></div>
+                            <div class="categoria-icon-overlay">
+                                <i class="bi bi-camera-video-fill"></i>
+                            </div>
+                        </div>
+                        <div class="categoria-content">
+                            <h4 class="categoria-title-playas">Playas</h4>
+                            <p>Disfruta de las hermosas playas de Ecuador en tiempo real. Observa el océano Pacífico, las olas y los atardeceres.</p>
+                            <div class="categoria-count">
+                                <span class="badge categoria-badge-active">1 cámara</span>
+                            </div>
+                            <div class="categoria-camaras mt-3">
+                                <a href="detalle.html?id=1" class="categoria-camara-link">
+                                    <div class="camara-item-enhanced">
+                                        <i class="bi bi-camera-video-fill"></i>
+                                        <div class="camara-item-info">
+                                            <strong>Santa Elena - Playa Ballenita</strong>
+                                            <small>Santa Elena, Ecuador</small>
+                                        </div>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Montañas -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="categoria-card-enhanced" data-categoria="montanas">
+                        <div class="categoria-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=400&fit=crop&q=80" alt="Andes Ecuatorianos" class="categoria-image" loading="lazy">
+                            <div class="categoria-overlay categoria-overlay-montanas"></div>
+                            <div class="categoria-icon-overlay">
+                                <i class="bi bi-camera-video-fill"></i>
+                            </div>
+                        </div>
+                        <div class="categoria-content">
+                            <h4 class="categoria-title-montanas">Montañas</h4>
+                            <p>Admira los majestuosos paisajes montañosos de los Andes ecuatorianos. Vistas panorámicas increíbles.</p>
+                            <div class="categoria-count">
+                                <span class="badge categoria-badge-coming">Próximamente</span>
+                            </div>
+                            <a href="categorias.html?cat=montanas" class="btn categoria-btn-coming mt-3 w-100">
+                                <i class="bi bi-arrow-right"></i> Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Ciudades -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="categoria-card-enhanced" data-categoria="ciudades">
+                        <div class="categoria-image-wrapper">
+                            <img src="recursos/quito.png" alt="Ciudades de Ecuador" class="categoria-image" loading="lazy">
+                            <div class="categoria-overlay categoria-overlay-ciudades"></div>
+                            <div class="categoria-icon-overlay">
+                                <i class="bi bi-camera-video-fill"></i>
+                            </div>
+                        </div>
+                        <div class="categoria-content">
+                            <h4 class="categoria-title-ciudades">Ciudades</h4>
+                            <p>Observa la vida urbana de las principales ciudades de Ecuador. Plazas, calles y actividades diarias.</p>
+                            <div class="categoria-count">
+                                <span class="badge categoria-badge-coming">Próximamente</span>
+                            </div>
+                            <a href="categorias.html?cat=ciudades" class="btn categoria-btn-coming mt-3 w-100">
+                                <i class="bi bi-arrow-right"></i> Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Naturaleza -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="categoria-card-enhanced" data-categoria="naturaleza">
+                        <div class="categoria-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop&q=80" alt="Selva Amazónica de Ecuador" class="categoria-image" loading="lazy">
+                            <div class="categoria-overlay categoria-overlay-naturaleza"></div>
+                            <div class="categoria-icon-overlay">
+                                <i class="bi bi-camera-video-fill"></i>
+                            </div>
+                        </div>
+                        <div class="categoria-content">
+                            <h4 class="categoria-title-naturaleza">Naturaleza</h4>
+                            <p>Explora la rica biodiversidad de Ecuador. Selvas, ríos y vida silvestre en su hábitat natural.</p>
+                            <div class="categoria-count">
+                                <span class="badge categoria-badge-coming">Próximamente</span>
+                            </div>
+                            <a href="categorias.html?cat=naturaleza" class="btn categoria-btn-coming mt-3 w-100">
+                                <i class="bi bi-arrow-right"></i> Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Volcanes -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="categoria-card-enhanced" data-categoria="volcanes">
+                        <div class="categoria-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=400&fit=crop&q=80" alt="Volcanes de Ecuador" class="categoria-image" loading="lazy">
+                            <div class="categoria-overlay categoria-overlay-volcanes"></div>
+                            <div class="categoria-icon-overlay">
+                                <i class="bi bi-camera-video-fill"></i>
+                            </div>
+                        </div>
+                        <div class="categoria-content">
+                            <h4 class="categoria-title-volcanes">Volcanes</h4>
+                            <p>Observa los imponentes volcanes de Ecuador. Actividad volcánica y paisajes únicos.</p>
+                            <div class="categoria-count">
+                                <span class="badge categoria-badge-coming">Próximamente</span>
+                            </div>
+                            <a href="categorias.html?cat=volcanes" class="btn categoria-btn-coming mt-3 w-100">
+                                <i class="bi bi-arrow-right"></i> Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Islas -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="categoria-card-enhanced" data-categoria="islas">
+                        <div class="categoria-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop&q=80" alt="Islas Galápagos Ecuador" class="categoria-image" loading="lazy">
+                            <div class="categoria-overlay categoria-overlay-islas"></div>
+                            <div class="categoria-icon-overlay">
+                                <i class="bi bi-camera-video-fill"></i>
+                            </div>
+                        </div>
+                        <div class="categoria-content">
+                            <h4 class="categoria-title-islas">Islas</h4>
+                            <p>Descubre las hermosas islas de Ecuador, incluyendo las Islas Galápagos.</p>
+                            <div class="categoria-count">
+                                <span class="badge categoria-badge-coming">Próximamente</span>
+                            </div>
+                            <a href="categorias.html?cat=islas" class="btn categoria-btn-coming mt-3 w-100">
+                                <i class="bi bi-arrow-right"></i> Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="recursos/logpeque.png" alt="ECURAICES WEBCAMS" class="footer-logo mb-4">
+                    <p class="footer-text">Red de webcams de Ecuador. Descubre nuestro país en tiempo real a través de nuestra red de cámaras en vivo.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Enlaces</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="categorias.html">Categorías</a></li>
+                        <li><a href="index.html#mapa">Mapa de Cámaras</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <div class="footer-contact">
+                        <p class="footer-contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <a href="mailto:info@ecuraices.com">info@ecuraices.com</a>
+                        </p>
+                        <p class="footer-contact-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Ecuador</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center">
+                <p class="footer-copyright">&copy; 2025 ECURAICES WEBCAMS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

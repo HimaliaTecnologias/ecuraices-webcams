@@ -1,22 +1,25 @@
 // Mapa de geolocalización para la página de detalle de cámara
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtener ID de la cámara desde la URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const camaraId = urlParams.get('id') || '1';
+    // Obtener slug de la cámara desde la URL
+    const path = window.location.pathname;
+    const slug = path.split('/').pop().replace('.html', '') || path.split('/').pop();
+    const camaraSlug = (slug && slug !== 'detalle.html' && slug !== 'detalle') 
+        ? slug 
+        : 'santa-elena-playa-ballenita';
     
     // Datos de las cámaras (en producción esto vendría de una API)
     const camaras = {
-        '1': {
+        'santa-elena-playa-ballenita': {
             nombre: 'Santa Elena - Playa Ballenita',
-            lat: -2.2269,
-            lng: -80.8583,
+            lat: -2.1985575,
+            lng: -80.8611329,
             categoria: 'Playa',
             descripcion: 'Hermosa playa con vista al océano Pacífico'
         }
     };
     
-    const camara = camaras[camaraId];
+    const camara = camaras[camaraSlug];
     
     if (!camara) {
         console.error('Cámara no encontrada');

@@ -18,11 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 1,
             nombre: 'Santa Elena - Playa Ballenita',
-            lat: -2.2269,
-            lng: -80.8583,
+            lat: -2.1985575,
+            lng: -80.8611329,
             categoria: 'Playa',
             descripcion: 'Hermosa playa con vista al océano Pacífico',
-            url: 'detalle.html?id=1'
+            url: 'santa-elena-playa-ballenita.html',
+            slug: 'santa-elena-playa-ballenita'
         }
         // Agregar más cámaras aquí cuando estén disponibles
     ];
